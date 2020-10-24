@@ -26,10 +26,19 @@ namespace Full_GRASP_And_SOLID
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
 
+            /* Como podemos ver la siguiente operaciones llevadas a cabo son polimorficas , ya que 
+            no se pregunta por el tipo,o por ejemplo la destination, para ejecutar un diferente tipo de codigo,
+            asi cumpliendo con el patron Polymorphism. 
+            
+            Tambien se cumple el principio Lsp ya que al cambiar de clase entre subtipos sigue pudiendose hacer la operacion
+            de la manera esperada.*/
+
             IPrinter printer = new ConsolePrinter();
             printer.PrintRecipe(recipe);
             printer= new FilePrinter();
             printer.PrintRecipe(recipe);
+
+
         }
 
         private static void PopulateCatalogs()
