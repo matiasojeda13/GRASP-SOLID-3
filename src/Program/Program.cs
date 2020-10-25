@@ -31,7 +31,9 @@ namespace Full_GRASP_And_SOLID
             asi cumpliendo con el patron Polymorphism. 
             
             Tambien se cumple el principio Lsp ya que al cambiar de clase entre subtipos sigue pudiendose hacer la operacion
-            de la manera esperada.*/
+            de la manera esperada. Nuestro programa va a poder imprimir las recetas a partir de la instancia IPrinter
+            pero funcionaria igual si usaramos los tipos defiinidos por ConsolePrinter o Filer Printer
+            */
 
             IPrinter printer = new ConsolePrinter();
             printer.PrintRecipe(recipe);
